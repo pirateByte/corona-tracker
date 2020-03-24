@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60" />
+    <title>covid-19 Counter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/1029a169a4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+2:400,700&display=swap" rel="stylesheet"> -->
+</head>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="head">India covid-19 status</h1>
+        <div class="counters top">
+            <div class="cases">
+                <h1>Total Cases</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["total_cases"] %></div>
+            </div>
+            <div class="cases">
+                <h1>New Cases</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["new_cases"] %></div>
+            </div>
+            <div class="cases">
+                <h1>Active Cases</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["active_cases"] %></div>
+            </div>
+
+        </div>
+        <div class="counters">
+            <div class="cases">
+                <h1>Total Death</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["total_deaths"] %></div>
+            </div>
+            <div class="cases">
+                <h1>New Death</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["new_deaths"] %></div>
+            </div>
+            <div class="cases">
+                <h1>Recovered</h1>
+                <div class="num"><%= data["latest_stat_by_country"][0]["total_recovered"] %></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="update">Please Stay at Home <i class="fas fa-home"></i></div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+
+
+
+</html>
